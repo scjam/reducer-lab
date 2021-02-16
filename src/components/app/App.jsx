@@ -38,8 +38,9 @@ function App() {
     <>
       <button onClick={undo}>undo</button>
       <button onClick={redo}>redo</button>
-      <input type="color" value={current} onChange={({ target }) => record(target.value)} />
-      <div style={{ backgroundColor: current, width: '10rem', height: '10rem' }}></div>
+      <label htmlFor="colorInput">color input</label>
+      <input id="colorInput" type="color" value={current} onChange={({ target }) => record(target.value)} />
+      <div data-testid="colorDiv"style={{ backgroundColor: current, width: '10rem', height: '10rem' }}></div>
     </>
   );
 }
