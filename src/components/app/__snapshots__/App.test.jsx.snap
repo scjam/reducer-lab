@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
+exports[`colorpicker change, undo, redo, and record renders App 1`] = `
 <DocumentFragment>
-  <button>
+  <button
+    data-testid="undo"
+  >
     undo
   </button>
-  <button>
+  <button
+    data-testid="redo"
+  >
     redo
   </button>
   <label
