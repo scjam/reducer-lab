@@ -33,9 +33,9 @@ describe('colorpicker change, undo, redo, and record', () => {
       }
     });
     fireEvent.click(undo);
-    const div = await screen.getByTestId('colorDiv');
+    const div = await screen.findByTestId('colorDiv');
     expect(div).toHaveStyle({
-      backgroundColor: '#FF0000'
+      backgroundColor: '#000000'
     });
   });
 

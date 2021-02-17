@@ -4,27 +4,29 @@ exports[`colorpicker change, undo, redo, and record renders App 1`] = `
 <DocumentFragment>
   <button
     data-testid="undo"
+    disabled=""
   >
     undo
   </button>
   <button
     data-testid="redo"
+    disabled=""
   >
     redo
   </button>
   <label
-    for="colorInput"
+    for="RECORD"
   >
     color input
   </label>
   <input
-    id="colorInput"
+    id="RECORD"
     type="color"
-    value="#FF0000"
+    value="#000000"
   />
   <div
     data-testid="colorDiv"
-    style="background-color: rgb(255, 0, 0); width: 10rem; height: 10rem;"
+    style="background-color: rgb(0, 0, 0); width: 10rem; height: 10rem;"
   />
 </DocumentFragment>
 `;
