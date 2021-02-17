@@ -38,5 +38,24 @@ describe('colorpicker change, undo, redo, and record', () => {
       backgroundColor: '#FF0000'
     });
   });
+
+  it('should redo the previous color change', async() => {
+    render(<App />);
+    const colorInput = screen.getByLabelText('color input');
+    const undo = screen.getByTestId('undo');
+    const redo = screen.getByTestId('redo');
+    fireEvent.change(colorInput, {
+      target: {
+        value: '#0000FF'
+      }
+    });
+    fireEvent.click(undo);
+    fireEvent.click(redo);
+    const div = await screen.getByTestId('colorDiv');
+    expect(div).toHaveStyle({
+      backgroundColor: '#0000FF'
+    });    
+  });
+  
   
 });
